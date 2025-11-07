@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Medicinal Plants and Their Shona Names</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #e8f5e9; color: #1b4d2b; }
+    header { background: #2e7d32; color: white; padding: 30px; text-align: center; }
+    nav { background: #1b5e20; padding: 12px; text-align: center; }
+    nav a { color: #c8e6c9; margin: 0 12px; text-decoration: none; font-weight: bold; }
+    nav a:hover { color: white; text-decoration: underline; }
+    .container { max-width: 900px; margin: 20px auto; padding: 20px; background: white; border-radius: 8px; }
+    .plant-image { width: 100%; max-width: 400px; display: block; margin: 0 auto 20px; border-radius: 8px; }
+    .collapsible { background-color: #2e7d32; color: white; cursor: pointer; padding: 10px 15px; width: 100%; border: none; text-align: left; outline: none; font-size: 16px; border-radius: 5px; margin-bottom: 5px; }
+    .active, .collapsible:hover { background-color: #145225; }
+    .content { padding: 0 15px; display: none; overflow: hidden; background-color: #dcedc8; border-radius: 5px; margin-bottom: 10px; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Medicinal Plants and Their Shona Names</h1>
+  </header>
+  <nav>
+    <a href="#aloe">Aloe Vera</a>
+    <a href="#papaya">Papaya</a>
+    <a href="#garlic">Garlic</a>
+  </nav>
+
+  <div class="container" id="aloe">
+    <h2>Aloe Vera (Gavakava)</h2>
+    <img class="plant-image" src="aloe.jpg" alt="Aloe Vera">
+    <button class="collapsible">Medicinal Uses</button>
+    <div class="content">
+      <p>Used for burns, skin healing, digestive aid.</p>
+    </div>
+    <button class="collapsible">Preparation / Dosage</button>
+    <div class="content">
+      <p>Extract gel and apply topically or consume small amounts of juice.</p>
+    </div>
+  </div>
+
+  <div class="container" id="papaya">
+    <h2>Papaya (Papaya)</h2>
+    <img class="plant-image" src="papaya.jpg" alt="Papaya">
+    <button class="collapsible">Medicinal Uses</button>
+    <div class="content">
+      <p>Digestive aid, anti-parasitic, boosts immunity.</p>
+    </div>
+    <button class="collapsible">Preparation / Dosage</button>
+    <div class="content">
+      <p>Eat ripe fruit, seeds for deworming, leaves in tea.</p>
+    </div>
+  </div>
+
+  <div class="container" id="garlic">
+    <h2>Garlic (Gariki)</h2>
+    <img class="plant-image" src="garlic.jpg" alt="Garlic">
+    <button class="collapsible">Medicinal Uses</button>
+    <div class="content">
+      <p>Antimicrobial, lowers blood pressure, boosts immunity.</p>
+    </div>
+    <button class="collapsible">Preparation / Dosage</button>
+    <div class="content">
+      <p>Crush cloves and consume raw or in meals, supplements possible.</p>
+    </div>
+  </div>
+
+  <script>
+    var coll = document.getElementsByClassName("collapsible");
+    for (var i = 0; i < coll.length; i++) {
+      coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.display === "block") {
+          content.style.display = "none";
+        } else {
+          content.style.display = "block";
+        }
+      });
+    }
+  </script>
+</body>
+</html>
